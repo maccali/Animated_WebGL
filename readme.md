@@ -1,6 +1,4 @@
-https://github.com/maccali/Animated_WebGL/tree/master/.github
-
-![Banner for Animated WebGL](https://github.com/maccali/Apod/blob/master/.github/banner.png)
+![Banner for Animated WebGL](https://github.com/maccali/Animated_WebGL/tree/master/.github/capa.png)
 
 # Animated WebGL
 > WebGL animation for tesk one Computer Grafics
