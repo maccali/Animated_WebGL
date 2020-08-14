@@ -1,7 +1,7 @@
-![Banner for Animated WebGL](https://github.com/maccali/Animated_WebGL/tree/master/.github/capa.png)
+![Banner for Animated WebGL](https://github.com/maccali/Animated_WebGL/blob/master/.github/capa.png)
 
 # Animated WebGL
-> WebGL animation for tesk one Computer Grafics
+> WebGL animation for task one Computer Grafics
 
 <p align="center">
   <i>Info</i>
