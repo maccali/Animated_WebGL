@@ -25,3 +25,8 @@
     <img alt="Node" src="https://img.shields.io/badge/PixiJS-v5.1.3-0.svg?style=flat-square&color=e91e63&labelColor=000000">
   </a>
 </p>
+
+### Objective
+> ---
+> * Rotation and Translation in 2D
+> ---
