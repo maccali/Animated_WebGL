@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebGL</title>
+</head>
+
+<body>
+
+</body>
+<script src="js/pixi.js"></script>
+<script>
+  const app = new PIXI.Application({
+    // backgroundColor: 0x593ebd,
+    backgroundColor: 0x000000,
+  });
+  document.body.appendChild(app.view);
+
+  var timer = 0
+  var animationSpeed = 2
+  var subTimer = 0
+
+  const saturn = PIXI.Sprite.from('img/saturn.png');
+  saturn.anchor.set(0.5);
+  saturn.height = 150
+  saturn.width = 150
+  saturn.x = 450;
+  saturn.y = 450;
+  app.stage.addChild(saturn);
+
+  const mars = PIXI.Sprite.from('img/mars.png');
+  mars.anchor.set(0.5);
+  mars.height = 80
+  mars.width = 80
+  mars.x = 210;
+  mars.y = 130;
+  app.stage.addChild(mars);
+
+  const earth = PIXI.Sprite.from('img/earth.png');
+  earth.anchor.set(0.5);
+  earth.height = 60
+  earth.width = 60
+  earth.x = 650;
+  earth.y = 130;
+  app.stage.addChild(earth);
+
+  const spaceShip = PIXI.Sprite.from('img/ss2.png');
+  spaceShip.anchor.set(0.5);
+  spaceShip.height = 80
+  spaceShip.width = 80
+  spaceShip.x = 730;
+  spaceShip.y = 550;
+  app.stage.addChild(spaceShip);
+
+  function giraEsquerda() {
+    spaceShip.rotation -= ((Math.PI * 2 * 0.125) / 3) * animationSpeed;
+  }
+
+  function giraDireita() {
+    spaceShip.rotation += ((Math.PI * 2 * 0.125) / 3) * animationSpeed;
+  }
+
+  function moveCima() {
+    spaceShip.y -= 1 * animationSpeed
+  }
+  function moveBaixo() {
+    spaceShip.y += 1 * animationSpeed
+
+  }
+  function moveDireita() {
+    spaceShip.x += 1 * animationSpeed
+
+  }
+  function moveEsquerda() {
+    spaceShip.x -= 1 * animationSpeed
+  }
+
+  app.ticker.speed = 2
+
+
+  app.ticker.add(() => {
+
+    subTimer = timer * animationSpeed
+
+    if (subTimer >= 0 && subTimer <= 500) {
+      moveCima()
+    }
+
+    if (subTimer >= 500 && subTimer <= 505) {
+      giraEsquerda()
+    }
+    if (subTimer >= 500 && subTimer <= 660) {
+      moveEsquerda()
+    }
+    if (subTimer >= 660 && subTimer <= 665) {
+      giraEsquerda()
+    }
+    if (subTimer >= 665 && subTimer <= 1150) {
+      moveBaixo()
+    }
+
+    if (subTimer >= 1155 && subTimer <= 1160) {
+      giraDireita()
+    }
+
+    if (subTimer >= 1160 && subTimer <= 1410) {
+      moveEsquerda()
+    }
+
+    if (subTimer >= 1410 && subTimer <= 1415) {
+      giraDireita()
+    }
+
+    if (subTimer >= 1415 && subTimer <= 1900) {
+      moveCima()
+    }
+
+    if (subTimer >= 1905 && subTimer <= 1910) {
+      giraEsquerda()
+    }
+
+    if (subTimer >= 1910 && subTimer <= 2100) {
+      moveEsquerda()
+    }
+
+    if (subTimer >= 2100 && subTimer <= 2105) {
+      giraEsquerda()
+    }
+
+    if (subTimer >= 2105 && subTimer <= 2900) {
+      moveBaixo()
+    }
+
+    timer += 1
+
+    // console.log(timer)
+  });
+
+</script>
+
+</html>
